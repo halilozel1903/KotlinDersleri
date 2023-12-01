@@ -1,2 +1,2 @@
-# Kotlin Dersleri
+# Kotlin Lessons
 Kotlin Programlama Dersleri
