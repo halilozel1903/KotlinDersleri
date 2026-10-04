@@ -8,14 +8,18 @@ kotlin {
 }
 
 application {
-    mainClass.set("KotlinHelloWorldKt")
+    mainClass.set("HelloWorldKt")
 }
 
 tasks.register<JavaExec>("runLesson") {
     group = "application"
-    description = "Run a lesson. Example: ./gradlew runLesson -Plesson=Degiskenler"
-    val lessonName = providers.gradleProperty("lesson").orElse("KotlinHelloWorld")
+    description = "Run a lesson. Example: ./gradlew runLesson -Plesson=Variables"
+    val lessonName = providers.gradleProperty("lesson").orElse("HelloWorld")
     classpath = sourceSets.main.get().runtimeClasspath
     mainClass.set(lessonName.map { "${it}Kt" })
+    standardInput = System.`in`
+}
+
+tasks.named<JavaExec>("run") {
     standardInput = System.`in`
 }

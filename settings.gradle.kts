@@ -1,4 +1,4 @@
-rootProject.name = "kotlindersleri"
+rootProject.name = "kotlin-dersleri"
 
 pluginManagement {
     repositories {
