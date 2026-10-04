@@ -1,10 +1,3 @@
-class Degiskenler {
-
-
-}
-
-
-
 fun main() {
 
 
